@@ -47,18 +47,6 @@ def process_attn(attentions, inputs):
 
 
 def remove_indices(tensor: torch.Tensor, idx_list: list) -> torch.Tensor:
-    """
-    在 PyTorch 中移除 tensor 指定维度上的元素。
-    如果是一维 tensor，则移除对应索引的元素；
-    如果是二维及以上 tensor，则默认移除第 0 维上的对应行。
-
-    参数:
-        tensor (torch.Tensor): 输入张量
-        idx_list (list): 要移除的索引列表
-
-    返回:
-        torch.Tensor: 移除后的张量
-    """
     if tensor.dim() == 1:
         mask = torch.ones(tensor.size(0), dtype=torch.bool)
         mask[idx_list] = False
