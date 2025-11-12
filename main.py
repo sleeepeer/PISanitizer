@@ -37,7 +37,7 @@ def parse_args():
     # General args
     parser.add_argument('--model_name_or_path', type=str, default="meta-llama/Llama-3.1-8B-Instruct",
                         help="Name of the model to be used.")
-    parser.add_argument('--result_path', type=str, default='data/LongBench-E-injection/incorrect-qasper-combine-random-1.json', 
+    parser.add_argument('--result_path', type=str, default='data/LongBench_injection/incorrect-qasper-combine-random-1.json', 
                         help="Path to the GCG results or dataset.")
     parser.add_argument('--config_path', type=str, default="configs/method_configs/debug_config.json", 
                         help="Path to the config file.")
@@ -184,6 +184,23 @@ def main(args):
                 "before_utility": False,
                 "after_utility": False,
             }
+        
+        if "lcc" in args.result_path:
+            if clean_result["before_success"]:
+                clean_result["before_utility"] = 0
+            if clean_result["after_success"]:
+                clean_result["after_utility"] = 0
+            if heuristic_result["before_success"]:
+                heuristic_result["before_utility"] = 0
+            if heuristic_result["after_success"]:
+                heuristic_result["after_utility"] = 0
+            if gcg_result["before_success"]:
+                gcg_result["before_utility"] = 0
+            if gcg_result["after_success"]:
+                gcg_result["after_utility"] = 0   
+        if "hotpotqa" in args.result_path or "qasper" in args.result_path:
+            if clean_result["before_success"]:
+                continue
 
         results.append({
             "correct_answer": dp["correct_answer"],
