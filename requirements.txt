@@ -11,3 +11,4 @@ scikit-learn==1.6.1
 fuzzywuzzy==0.18.0
 rouge==1.0.1
 accelerate==1.6.0
+huggingface-hub==0.35.0
