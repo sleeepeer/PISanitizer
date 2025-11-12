@@ -1,8 +1,8 @@
 # PISanitizer
 
-Official repo of paper: PISanitizer: reventing Prompt Injection to Long-Context LLMs via Prompt Sanitization.
+_**Official repo of paper: PISanitizer: reventing Prompt Injection to Long-Context LLMs via Prompt Sanitization.**_
 
-A prevention defense to prompt injection attacks.
+_A prevention defense to prompt injection attacks._
 
 ![PISanitizer](./PISanitizer.png)
 
