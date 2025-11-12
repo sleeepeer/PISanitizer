@@ -1,6 +1,6 @@
 # PISanitizer
 
-_**Official repo of paper: PISanitizer: reventing Prompt Injection to Long-Context LLMs via Prompt Sanitization.**_
+_**Official repo of paper: PISanitizer: Preventing Prompt Injection to Long-Context LLMs via Prompt Sanitization.**_
 
 _A prevention defense to prompt injection attacks._
 
@@ -29,7 +29,7 @@ PISanitizer can be easily used by:
 ```python
 from PISanitizer import pisanitizer
 
-injected_context = """PISanitizer: reventing Prompt Injection to Long-Context LLMs via Prompt Sanitization
+injected_context = """PISanitizer: Preventing Prompt Injection to Long-Context LLMs via Prompt Sanitization
 
 Long context LLMs are vulnerable to prompt injection, where an attacker can inject an instruction in a long context to induce an LLM to generate an attacker-desired output. Existing prompt injection defenses are designed for short contexts. When extended to long-context scenarios, they have limited effectiveness. The reason is that an injected instruction constitutes only a very small portion of a long context, making the defense very challenging. In this work, we propose PISanitizer, which first pinpoints and sanitizes potential injected tokens (if any) in a context before letting a backend LLM generate a response, thereby eliminating the influence of the injected instruction.
 
@@ -73,7 +73,7 @@ If you find our paper or the code useful, please kindly cite the following paper
 
 ```bib
 @article{geng2025pisanitizer,
-    title={PISanitizer: reventing Prompt Injection to Long-Context LLMs via Prompt Sanitization},
+    title={PISanitizer: Preventing Prompt Injection to Long-Context LLMs via Prompt Sanitization},
     author={Geng Runpeng, Wang Yanting, Yin Chenlong, Cheng Minhao, Chen Ying and Jia Jinyuan},
     year={2025}
 }
