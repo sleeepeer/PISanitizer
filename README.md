@@ -56,7 +56,7 @@ And then, use [run.py](./run.py) to run experiments in parallel. Note that this 
 python run.py
 ```
 
-[Optional] If you want to test injected tasks from [SEP](https://arxiv.org/abs/2403.06833) and [Open-Prompt-Injection](https://github.com/liu00222/Open-Prompt-Injection), you may need to setup Azure OpenAI API in [evaluations/openai_configs.yaml](./evaluations/openai_configs.yaml):
+[Optional] If you want to test injected tasks from [SEP](https://arxiv.org/abs/2403.06833) and [Open-Prompt-Injection](https://github.com/liu00222/Open-Prompt-Injection), you may need to setup LLM-as-a-judge using Azure OpenAI API in [evaluations/openai_configs.yaml](./evaluations/openai_configs.yaml):
 
 ```yaml
 default:
