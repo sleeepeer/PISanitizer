@@ -14,7 +14,6 @@ Please run the following commands to set up the environment:
 conda create -n pisanitizer python=3.10 -y
 conda activate pisanitizer
 pip install -r requirements.txt
-pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
 ```
 
 By default, we use meta-llama/Llama-3.1-8B-Instruct in our code. So you may need to **login to huggingface** with your HuggingFace Access Token:
