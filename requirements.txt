@@ -13,3 +13,4 @@ rouge==1.0.1
 accelerate==1.6.0
 huggingface-hub==0.35.0
 jieba==0.42.1
+levenshtein==0.27.3
