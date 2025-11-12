@@ -282,7 +282,7 @@ def pisanitizer(
     return {
         "after_response": after_response,
         "before_response": before_response,
-        "no_defense_time": first_generation_time,
+        "no_defense_time": generation_time,
         "defense_time": total_attn_signal_time + total_judge_time + generation_time,
         "precision": cumulative_precision,
         "recall": cumulative_recall,
