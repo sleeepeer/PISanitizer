@@ -1,4 +1,5 @@
 import random
+from tqdm import tqdm
 from src.utils import save_json, load_json, setup_seeds, contexts_to_sentences
 
 setup_seeds(42)
@@ -64,6 +65,7 @@ for attack_strategy in [
     "ignore",
     "naive",
 ]:
+    print(f"Preparing data for {attack_strategy} attack...")
 
     for dataset_name in all_datasets:
         dataset = load_json(f"data/LongBench_incorrect_answer/{dataset_name}.json")
@@ -71,7 +73,7 @@ for attack_strategy in [
         new_dataset_sep = []
         new_dataset_open_prompt_injection = []
         new_dataset_incorrect = []
-        for idx, dp in enumerate(dataset):
+        for idx, dp in tqdm(enumerate(dataset)):
             contexts = dp['context']
             question = dp["input"]
             gt_answer = dp["answers"]
