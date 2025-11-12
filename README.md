@@ -16,7 +16,7 @@ conda activate pisanitizer
 pip install -r requirements.txt
 ```
 
-By default, we use meta-llama/Llama-3.1-8B-Instruct in our code. So you may need to **login to huggingface** with your HuggingFace Access Token:
+By default, we use [meta-llama/Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) in our code. So you may need to **login to huggingface** with your HuggingFace Access Token:
 
 ```bash
 huggingface-cli login
