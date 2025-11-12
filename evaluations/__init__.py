@@ -4,7 +4,7 @@ from evaluations.longbench_metrics import (
     retrieval_score,
     code_sim_score,
 )
-from llm_judge import (
+from evaluations.llm_judge import (
     llm_judge_utility,
     llm_judge_asr,
 )

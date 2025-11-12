@@ -30,7 +30,17 @@ def run(model_name_or_path, result_path, config_path, method, data_num=100, name
 name = "pisanitizer"
 gpus = [0, 1, 2, 3]
 
-result_paths = glob.glob(f"data/LongBench_injection/*.json")
+# result_paths = glob.glob(f"data/LongBench_injection/*.json")
+result_paths = [
+    "data/LongBench_injection/incorrect-qasper-combine-random-1.json",
+    "data/LongBench_injection/incorrect-hotpotqa-combine-random-1.json",
+    "data/LongBench_injection/incorrect-gov_report-combine-random-1.json",
+    "data/LongBench_injection/incorrect-multi_news-combine-random-1.json",
+    "data/LongBench_injection/incorrect-lcc-combine-random-1.json",
+    "data/LongBench_injection/incorrect-passage_retrieval_en-combine-random-1.json",
+]
+
+
 method = "pisanitizer"
 config_paths = []
 config = {
