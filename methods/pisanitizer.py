@@ -194,8 +194,8 @@ def pisanitizer(
         potential_seqs = []
         potential_token_idx = []
         for remove_range in remove_list:
-            potential_seqs.append(list(range(remove_range[0], remove_range[1])))
-            potential_token_idx.extend(list(range(remove_range[0], remove_range[1])))
+            potential_seqs.append(list(range(remove_range[0], remove_range[1]+1)))
+            potential_token_idx.extend(list(range(remove_range[0], remove_range[1]+1)))
 
 
         potential_texts = []
@@ -251,14 +251,14 @@ def pisanitizer(
     # Calculate precision/recall for first iteration only
     if 'first_removed_original_idx' in locals():
         first_precision, first_recall, first_f1 = precision_recall_f1(first_removed_original_idx, all_inject_idx)
-        print(f"First Iteration - Precision: {first_precision:.4f}, Recall: {first_recall:.4f}, F1: {first_f1:.4f}")
+        # print(f"First Iteration - Precision: {first_precision:.4f}, Recall: {first_recall:.4f}, F1: {first_f1:.4f}")
     else:
         first_precision, first_recall, first_f1 = 0.0, 0.0, 0.0
-        print(f"First Iteration - No tokens removed")
+        # print(f"First Iteration - No tokens removed")
     
     # Calculate precision/recall for all iterations combined
     cumulative_precision, cumulative_recall, cumulative_f1 = precision_recall_f1(cumulative_removed_original_idx, all_inject_idx)
-    print(f"All Iterations - Precision: {cumulative_precision:.4f}, Recall: {cumulative_recall:.4f}, F1: {cumulative_f1:.4f}")
+    # print(f"All Iterations - Precision: {cumulative_precision:.4f}, Recall: {cumulative_recall:.4f}, F1: {cumulative_f1:.4f}")
 
     # Generate final response with the cleaned context
     start_time = time.time()

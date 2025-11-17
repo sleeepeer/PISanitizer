@@ -115,8 +115,8 @@ def pisanitizer(
         potential_seqs = []
         potential_token_idx = []
         for remove_range in remove_list:
-            potential_seqs.append(list(range(remove_range[0], remove_range[1])))
-            potential_token_idx.extend(list(range(remove_range[0], remove_range[1])))
+            potential_seqs.append(list(range(remove_range[0], remove_range[1]+1)))
+            potential_token_idx.extend(list(range(remove_range[0], remove_range[1]+1)))
 
             remove_positions.extend([remove_range[0], remove_range[1]])
 
