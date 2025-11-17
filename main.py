@@ -96,7 +96,7 @@ def main(args):
         print(f"=========={idx+1} / {len(dataset)}==========")
         
         dp["clean_messages"][-1]["content"] += final_prompt
-        dp["injected_messages"][-1]["content"] += final_prompt        
+        dp["injected_messages"][-1]["content"] += final_prompt   
 
         attack_target = dp["target"]
         try:

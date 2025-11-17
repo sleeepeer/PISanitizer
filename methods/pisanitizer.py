@@ -12,7 +12,7 @@ DEFAULT_CONFIG = {
     "start_offset": 500,
     "end_offset": 500,
     "anchor_prompt": 0,
-    "smooth_win": 9,
+    "smooth_win": None,
     "max_gap": 10,
     "threshold": 0.01,
 }
@@ -168,6 +168,12 @@ def pisanitizer(
             attn_signal = torch.tensor(layer_avg_attn).max(dim=0).values.tolist()
         elif config["mode"] == "top5-avg":
             attn_signal = top_k_mean(layer_avg_attn, k=5)
+
+        if config["smooth_win"] is None:
+            if len(current_context_tokens) < 500:
+                config["smooth_win"] = 5
+            else:
+                config["smooth_win"] = 9
 
         processed_attn_signal, remove_list = group_peaks(
             attn_signal[detect_start:detect_end], 

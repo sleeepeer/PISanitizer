@@ -18,7 +18,7 @@ tokenizer = None
 
 def pisanitizer(
     context=None,
-    smooth_win=9,
+    smooth_win=None,
     max_gap=10,
     threshold=0.01
 ):  
@@ -96,6 +96,12 @@ def pisanitizer(
         layer_max_attn, layer_avg_attn, layer_top5_attn = process_attn(detect_attentions, detect_inputs["input_ids"])
 
         attn_signal = torch.tensor(layer_avg_attn).max(dim=0).values.tolist()
+
+        if smooth_win is None:
+            if len(current_context_tokens) < 500:
+                smooth_win = 5
+            else:
+                smooth_win = 9
 
         processed_attn_signal, remove_list = group_peaks(
             attn_signal[detect_start:detect_end], 

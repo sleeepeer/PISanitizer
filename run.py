@@ -48,7 +48,7 @@ config = {
     "start_offset": 500,
     "end_offset": 500,
     "anchor_prompt": 0,
-    "smooth_win": 5,
+    "smooth_win": None,
     "max_gap": 10,
     "threshold": 0.01
 }
