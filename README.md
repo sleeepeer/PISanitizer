@@ -1,6 +1,6 @@
 # PISanitizer
 
-_**Official repo of paper: PISanitizer: Preventing Prompt Injection to Long-Context LLMs via Prompt Sanitization.**_
+_**Official repo of paper: [PISanitizer: Preventing Prompt Injection to Long-Context LLMs via Prompt Sanitization](https://arxiv.org/abs/2511.10720).**_
 
 _A prevention defense to prompt injection attacks._
 
@@ -75,6 +75,7 @@ If you find our paper or the code useful, please kindly cite the following paper
 @article{geng2025pisanitizer,
     title={PISanitizer: Preventing Prompt Injection to Long-Context LLMs via Prompt Sanitization},
     author={Geng Runpeng, Wang Yanting, Yin Chenlong, Cheng Minhao, Chen Ying and Jia Jinyuan},
+    journal={arXiv preprint arXiv:2511.10720},
     year={2025}
 }
 ```
