@@ -4,7 +4,9 @@ _**Official repo of paper: [PISanitizer: Preventing Prompt Injection to Long-Con
 
 _A prevention defense to prompt injection attacks._
 
-![PISanitizer](./PISanitizer.png)
+<img src="./assets/figure1.png" alt="PISanitizer" style="zoom:50%;" />
+
+<img src="./assets/figure2.png" alt="PISanitizer">
 
 ## 🔨 Setup environment
 
@@ -79,4 +81,3 @@ If you find our paper or the code useful, please kindly cite the following paper
     year={2025}
 }
 ```
-
