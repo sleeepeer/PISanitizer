@@ -6,7 +6,7 @@ _A prevention defense to prompt injection attacks._
 
 <img src="./assets/figure1.png" alt="PISanitizer" style="zoom:50%;" />
 
-<img src="./assets/figure2.png" alt="PISanitizer">
+<!-- <img src="./assets/figure2.png" alt="PISanitizer"> -->
 
 ## 🔨 Setup environment
 
