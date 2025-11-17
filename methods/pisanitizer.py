@@ -201,10 +201,10 @@ def pisanitizer(
         potential_texts = []
         for idx, seq in enumerate(potential_seqs):
             if len(seq) > 1:
-                potential_texts.append(tokenizer.decode(current_context_tokens[seq[0]:seq[-1]], skip_special_tokens=True))
+                potential_texts.append(tokenizer.decode(current_context_tokens[seq[0]:seq[-1]+1], skip_special_tokens=True))
             else:
-                potential_texts.append(tokenizer.decode(current_context_tokens[seq[0]], skip_special_tokens=True))
-            nice_print(f"AttnShield Remove [Iter {iteration}, {idx+1}] {potential_texts[-1]}")
+                potential_texts.append(tokenizer.decode(current_context_tokens[seq[0]:seq[0]+1], skip_special_tokens=True))
+            nice_print(f"PISanitizer Remove [Iter {iteration}, {idx+1}] {potential_texts[-1]}")
         all_potential_texts.extend(potential_texts)
         
         end_time = time.time()
