@@ -75,9 +75,9 @@ If you find our paper or the code useful, please kindly cite the following paper
 
 ```bib
 @article{geng2025pisanitizer,
-    title={PISanitizer: Preventing Prompt Injection to Long-Context LLMs via Prompt Sanitization},
-    author={Geng Runpeng, Wang Yanting, Yin Chenlong, Cheng Minhao, Chen Ying and Jia Jinyuan},
-    journal={arXiv preprint arXiv:2511.10720},
-    year={2025}
+  title={PISanitizer: Preventing Prompt Injection to Long-Context LLMs via Prompt Sanitization},
+  author={Geng, Runpeng and Wang, Yanting and Yin, Chenlong and Cheng, Minhao and Chen, Ying and Jia, Jinyuan},
+  journal={arXiv preprint arXiv:2511.10720},
+  year={2025}
 }
 ```
