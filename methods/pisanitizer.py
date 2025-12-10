@@ -111,7 +111,7 @@ def pisanitizer(
     
     # Loop until no tokens are removed
     while True:
-        if iteration > 5:
+        if iteration > 4:
             break
         iteration += 1
         print(f"\n=== Iteration {iteration} ===")
