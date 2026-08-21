@@ -1,8 +1,10 @@
 # PISanitizer
 
+**EMNLP 2026 Main Conference Publication**
+
 _**Official repo of paper: [PISanitizer: Preventing Prompt Injection to Long-Context LLMs via Prompt Sanitization](https://arxiv.org/abs/2511.10720).**_
 
-_A prevention defense to prompt injection attacks._
+ A prevention defense to prompt injection attacks.
 
 <img src="./assets/figure1.png" alt="PISanitizer" style="zoom:50%;" />
 
